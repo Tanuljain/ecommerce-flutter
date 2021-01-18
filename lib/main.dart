@@ -1,5 +1,6 @@
+import 'package:ecommerce/screens/onBoarding.dart';
 import 'package:flutter/material.dart';
-import 'screens/onBoarding.dart';
+// import 'screens/onBoarding.dart';
 
 void main() {
   runApp(MyApp());

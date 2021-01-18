@@ -1,3 +1,4 @@
+import 'package:ecommerce/screens/product_detail.dart';
 import 'package:flutter/material.dart';
 
 class Products extends StatefulWidget {
@@ -10,61 +11,71 @@ class _ProductsState extends State<Products> {
     {
       "name": "Rich Planter",
       "picture": "assets/images/i1.png",
-      "old_price": 120,
+      "description":
+          "This is a test product description. If cacheWidth or cacheHeight are provided, it indicates to the engine that the image must be decoded at the specified size. The image will be rendered to the constraints of the layout or width and height regardless of these parameters. These parameters are primarily intended to reduce the memory usage of ImageCache.",
       "price": 85,
     },
     {
       "name": "Red Planter",
       "picture": "assets/images/i2.png",
-      "old_price": 100,
+      "description":
+          "This is a test product description. If cacheWidth or cacheHeight are provided, it indicates to the engine that the image must be decoded at the specified size. The image will be rendered to the constraints of the layout or width and height regardless of these parameters. These parameters are primarily intended to reduce the memory usage of ImageCache.",
       "price": 50,
     },
     {
       "name": "Pot Planter",
       "picture": "assets/images/i3.png",
-      "old_price": 100,
+      "description":
+          "This is a test product description. If cacheWidth or cacheHeight are provided, it indicates to the engine that the image must be decoded at the specified size. The image will be rendered to the constraints of the layout or width and height regardless of these parameters. These parameters are primarily intended to reduce the memory usage of ImageCache.",
       "price": 50,
     },
     {
       "name": "Flower planter",
       "picture": "assets/images/i4.png",
-      "old_price": 100,
+      "description":
+          "This is a test product description. If cacheWidth or cacheHeight are provided, it indicates to the engine that the image must be decoded at the specified size. The image will be rendered to the constraints of the layout or width and height regardless of these parameters. These parameters are primarily intended to reduce the memory usage of ImageCache.",
       "price": 50,
     },
     {
       "name": "Grow Planter",
       "picture": "assets/images/i5.png",
-      "old_price": 100,
+      "description":
+          "This is a test product description. If cacheWidth or cacheHeight are provided, it indicates to the engine that the image must be decoded at the specified size. The image will be rendered to the constraints of the layout or width and height regardless of these parameters. These parameters are primarily intended to reduce the memory usage of ImageCache.",
       "price": 50,
     },
     {
       "name": "Flower planter",
       "picture": "assets/images/i6.png",
-      "old_price": 100,
+      "description":
+          "This is a test product description. If cacheWidth or cacheHeight are provided, it indicates to the engine that the image must be decoded at the specified size. The image will be rendered to the constraints of the layout or width and height regardless of these parameters. These parameters are primarily intended to reduce the memory usage of ImageCache.",
       "price": 50,
     },
     {
       "name": "Flower planter",
       "picture": "assets/images/pn2.png",
-      "old_price": 100,
+      "description":
+          "This is a test product description. If cacheWidth or cacheHeight are provided, it indicates to the engine that the image must be decoded at the specified size. The image will be rendered to the constraints of the layout or width and height regardless of these parameters. These parameters are primarily intended to reduce the memory usage of ImageCache.",
       "price": 50,
     },
     {
       "name": "Flower planter",
       "picture": "assets/images/i7.png",
-      "old_price": 100,
+      "description":
+          "This is a test product description. If cacheWidth or cacheHeight are provided, it indicates to the engine that the image must be decoded at the specified size. The image will be rendered to the constraints of the layout or width and height regardless of these parameters. These parameters are primarily intended to reduce the memory usage of ImageCache.",
       "price": 50,
     },
     {
       "name": "Flower planter",
       "picture": "assets/images/p5.png",
-      "old_price": 100,
+      "description":
+          "This is a test product description. If cacheWidth or cacheHeight are provided, it indicates to the engine that the image must be decoded at the specified size. The image will be rendered to the constraints of the layout or width and height regardless of these parameters. These parameters are primarily intended to reduce the memory usage of ImageCache.",
       "price": 50,
     },
     {
       "name": "Flower planter",
       "picture": "assets/images/pp1.png",
-      "old_price": 100,
+      "description":
+          "This is a test product description. If cacheWidth or cacheHeight are provided, it indicates to the engine that the image must be decoded at the specified size. The image will be rendered to the constraints of the layout or width and height regardless of these parameters. These parameters are primarily intended to reduce the memory usage of ImageCache.",
       "price": 50,
     }
   ];
@@ -79,7 +90,7 @@ class _ProductsState extends State<Products> {
           return SingleProd(
             productName: productList[index]['name'],
             productImage: productList[index]['picture'],
-            // productOldPrice: productList[index]['old_price'],
+            productDescription: productList[index]['description'],
             productPrice: productList[index]['price'],
           );
         });
@@ -89,41 +100,54 @@ class _ProductsState extends State<Products> {
 class SingleProd extends StatelessWidget {
   final productName;
   final productImage;
-  // final productOldPrice;
+  final productDescription;
   final productPrice;
 
   SingleProd({
     this.productName,
     this.productImage,
-    // this.productOldPrice,
+    this.productDescription,
     this.productPrice,
   });
 
   @override
   Widget build(BuildContext context) {
-    return Card(
-      child: Column(
-        mainAxisSize: MainAxisSize.min,
-        children: <Widget>[         
-          Image.asset(productImage, height: 130, width: 100),
-          Padding(
-            padding: const EdgeInsets.only(left: 10, right: 10, top: 10),
-            child: Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: <Widget>[
-                Text(
-                  productName,
-                  style: TextStyle(fontWeight: FontWeight.bold),
-                ),
-                Text(
-                  "\$$productPrice",
-                  style:
-                      TextStyle(color: Colors.red, fontWeight: FontWeight.w800),
-                ),
-              ],
-            ),
+    return InkWell(
+      onTap: () => Navigator.push(
+        context,
+        MaterialPageRoute(
+          builder: (context) => ProductDetails(
+            productName: productName,
+            productImage: productImage,
+            productDescription: productDescription,
+            productPrice: productPrice,
           ),
-        ],
+        ),
+      ),
+      child: Card(
+        child: Column(
+          mainAxisSize: MainAxisSize.min,
+          children: <Widget>[
+            Image.asset(productImage, height: 130, width: 100),
+            Padding(
+              padding: const EdgeInsets.only(left: 10, right: 10, top: 10),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: <Widget>[
+                  Text(
+                    productName,
+                    style: TextStyle(fontWeight: FontWeight.bold),
+                  ),
+                  Text(
+                    "\$$productPrice",
+                    style: TextStyle(
+                        color: Colors.red, fontWeight: FontWeight.w800),
+                  ),
+                ],
+              ),
+            ),
+          ],
+        ),
       ),
     );
   }

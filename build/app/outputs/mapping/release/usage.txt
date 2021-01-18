@@ -1393,9 +1393,9 @@ com.google.common.reflect.TypeResolver
 androidx.core.widget.ListPopupWindowCompat
 androidx.core.app.AlarmManagerCompat
 androidx.core.graphics.drawable.WrappedDrawableApi14
-com.google.common.primitives.Longs$LexicographicalComparator
-com.google.common.collect.MultimapBuilder$LinkedHashSetSupplier
 com.google.common.cache.LocalCache$Strength$1
+com.google.common.collect.MultimapBuilder$LinkedHashSetSupplier
+com.google.common.primitives.Longs$LexicographicalComparator
 com.google.common.collect.ArrayTable$ArrayMap$1
 com.google.common.collect.Multimaps$CustomSetMultimap
 com.google.common.collect.TreeRangeSet$RangesByUpperBound$2
@@ -3452,8 +3452,8 @@ androidx.test.espresso.core.internal.deps.guava.util.concurrent.ForwardingFuture
 androidx.test.internal.runner.junit3.AndroidSuiteBuilder
 com.google.common.collect.FilteredEntryMultimap
 org.hamcrest.collection.IsIterableWithSize
-androidx.test.espresso.core.internal.deps.guava.base.ExtraObjectsMethodsForWeb
 androidx.test.espresso.matcher.CursorMatchers$2
+androidx.test.espresso.core.internal.deps.guava.base.ExtraObjectsMethodsForWeb
 androidx.annotation.NonNull
 kotlin.properties.Delegates$observable$1
 androidx.core.R$string
