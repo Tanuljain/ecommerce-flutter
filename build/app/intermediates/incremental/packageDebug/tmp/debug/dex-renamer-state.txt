@@ -1,4 +1,4 @@
-#Tue Jan 19 01:07:54 IST 2021
+#Tue Jan 19 01:53:20 IST 2021
 base.0=/home/dheeraj/flutter/ecommerce/build/app/intermediates/dex/debug/mergeDexDebug/classes.dex
 path.0=classes.dex
 renamed.0=classes.dex

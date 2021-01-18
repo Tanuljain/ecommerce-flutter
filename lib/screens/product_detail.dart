@@ -88,7 +88,7 @@ class ProductDetails extends StatelessWidget {
                   label: Text(
                     'Cart',
                     style: TextStyle(
-                      fontSize: 18.0,
+                      fontSize: 20.0,
                       color: Colors.white70,
                     ),
                   ),
@@ -103,16 +103,12 @@ class ProductDetails extends StatelessWidget {
           ),
           Padding(
             padding: const EdgeInsets.all(20.0),
-            child: Expanded(
-              child: Container(
-                child: Text(
-                  productDescription,
-                  style: TextStyle(
-                    fontWeight: FontWeight.w400,
-                    color: Colors.black38,
-                    fontSize: 18,
-                  ),
-                ),
+            child: Text(
+              productDescription,
+              style: TextStyle(
+                fontWeight: FontWeight.w400,
+                color: Colors.black38,
+                fontSize: 15,
               ),
             ),
           )

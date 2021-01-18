@@ -1393,9 +1393,9 @@ com.google.common.reflect.TypeResolver
 androidx.core.widget.ListPopupWindowCompat
 androidx.core.app.AlarmManagerCompat
 androidx.core.graphics.drawable.WrappedDrawableApi14
-com.google.common.cache.LocalCache$Strength$1
-com.google.common.collect.MultimapBuilder$LinkedHashSetSupplier
 com.google.common.primitives.Longs$LexicographicalComparator
+com.google.common.collect.MultimapBuilder$LinkedHashSetSupplier
+com.google.common.cache.LocalCache$Strength$1
 com.google.common.collect.ArrayTable$ArrayMap$1
 com.google.common.collect.Multimaps$CustomSetMultimap
 com.google.common.collect.TreeRangeSet$RangesByUpperBound$2
@@ -3977,13 +3977,13 @@ org.junit.rules.ExternalResource
 com.google.common.primitives.Floats$FloatConverter
 com.google.common.collect.ImmutableSortedSet
 com.google.common.base.Functions
+androidx.test.espresso.action.GeneralLocation$5
 io.flutter.embedding.engine.mutatorsstack.FlutterMutatorsStack$FlutterMutator:
     public void <init>(io.flutter.embedding.engine.mutatorsstack.FlutterMutatorsStack,android.graphics.Path)
     public io.flutter.embedding.engine.mutatorsstack.FlutterMutatorsStack$FlutterMutatorType getType()
     public android.graphics.Rect getRect()
     public android.graphics.Path getPath()
     private android.graphics.Path path
-androidx.test.espresso.action.GeneralLocation$5
 androidx.test.espresso.matcher.ViewMatchers$WithContentDescriptionMatcher
 com.google.common.base.Joiner
 io.flutter.embedding.android.FlutterImageView:
